@@ -17,12 +17,16 @@ contract NFT is ERC1155, Ownable{
 
     BUSD busd;
 
+    //Custom Error
     error notSending();
 
-    //Url pinata
+    //Pinata
     mapping(uint => string) public provenanceHash;
+
     mapping(uint=>bool) private tokenExist;
     mapping(uint=>uint) public tokenPrices;
+
+    //After buy 1 token this will be setted in true and can't buy/receive anymore tokens
     mapping(address => bool)public stopBuy;
 
     constructor()ERC1155(""){
@@ -30,6 +34,7 @@ contract NFT is ERC1155, Ownable{
     }
 
 
+    //Initialize BUSD address
     function initBUSDAddress(address BUSDAddress)public onlyOwner{
         busd = BUSD(BUSDAddress);
     }

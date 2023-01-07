@@ -6,7 +6,7 @@ describe("Testing contracts functionalities", function(){
 
     let Busd, busd, Nft, nft, owner, account1, account2;
 
-    const ipfs = "ipfs/Qmb8Gt4SSdwXwFyPBzgytpMFCtdW3MQ5qaNQqDWs7iibcb";
+    const ipfs = "https://gateway.pinata.cloud/ipfs/QmTVHG1MvdRWWKQydTM3oEZ9GnUUTBuox2CJGmgNNFrEbn";
 
 
     before(async()=>{
